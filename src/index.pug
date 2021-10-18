@@ -1,7 +1,7 @@
 include ./components/button/button
 include ./components/logo/logo
 include ./components/textField/textField
-include ./components/dropdown/dropdown
+//include ./components/dropdown/dropdown
 include ./components/expandableCheckboxList/expandableCheckboxList
 include ./components/feature/feature
 include ./components/richCheckboxButton/richCheckboxButton
@@ -9,6 +9,7 @@ include ./components/radioButton/radioButton
 include ./components/toggle/toggle
 include ./components/likeButton/likeButton
 include ./components/bulletList/bulletList
+include ./components/rateButton/rateButton
 
 doctype html
 html(lang="ru")
@@ -17,8 +18,9 @@ html(lang="ru")
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width")
         title Toxin - бронирование номеров
-        link(rel="stylesheet", href="./styles.scss")
+        //link(rel="stylesheet", href="./styles.scss")
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet")
     body
         header
             +logo
@@ -33,6 +35,7 @@ html(lang="ru")
                     +btn({title: "Зарегистрироваться", isActive: true, isColored: true, block: "head"})
         .content
             .content__selectionWindow
+                +rateButton({block: 'content', class: 'content__rateButton'})
         .navSection
             .navSection__aboutHotel
                 +logo
@@ -71,4 +74,4 @@ html(lang="ru")
                 img(src="/icons/logo_twitter.svg")
                 img(src="/icons/logo_facebook.svg")
                 img(src="/icons/logo_inst.svg")
-        script(src="./js/index.js")
+        //script(src="./js/index.js")

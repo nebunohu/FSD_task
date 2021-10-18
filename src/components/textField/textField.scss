@@ -58,6 +58,6 @@ input:focus::placeholder {
 .textField input[type="submit"] {
   width: 44px;
   border: none;
-  background: url(/icons/arrow_forward.svg) no-repeat 50% 50%;
+  background: url('../../icons/arrow_forward.svg') no-repeat 50% 50%;
   cursor: pointer;
 }
